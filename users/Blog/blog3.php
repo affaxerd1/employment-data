@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Job available</title>
+        <title>jobs</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -15,17 +15,39 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#!">Kipkelion East Youth Employment Programme</a>
+                    <div class="social_media">
+                            <a class="icons" href=""><ion-icon name="logo-twitter"></ion-icon></a>
+                            <a class="icons" href=""><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a class="icons" href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a class="icons" href=""><ion-icon name="mail-sharp"></ion-icon></a>
+                            
+
+                    </div> 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Register</a></li>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-right"> 
+            
+                    <ul class="nav navbar-nav navbar-right">
+                    
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                            
                     </ul>
+
                 </div>
             </div>
+            <a href="../register/index.php">
+                    <button class="button2" >
+                                Sign up
+                                <div class="arrow-wrapper2">
+                                    <div class="arrow2"> </div>
+
+                                </div>  
+                            </button>
+            </a>
+                           
+            
         </nav>
         <!-- Page header with logo and tagline-->
         <header class="py-5 bg-light border-bottom mb-4" id="header" >
@@ -33,7 +55,7 @@
                 <div class="text-center my-5">
                 
                 
-                    <h1 class="fw-bolder">Jobs Available</h1>
+                    <h1 class="fw-bolder">Kipkelion East Youth Employment Programme</h1>
                     <p class="lead mb-0">Register so you can always get frequent alerts of new jobs within your field</p>
                 </div>
             </div>
@@ -67,28 +89,18 @@
                             <h2 class="card-title h4"><?php echo $q['job_title']; ?></h2>
                             <h2 class="card-title h6">Job Description</h2>
                             <p class="card-text"><?php echo $q['description'];?></p>
-                            <span class="moreText">
+                            <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Read More</span>
+                            </button>
                             <h2 class="card-title h6">responsibilities</h2>
                             <p class="card-text"><?php echo $q['responsibilities'];?></p>
                             <h2 class="card-title h6">requirements</h2>
                             <p class="card-text"><?php echo $q['requirements'];?></p>
                             <a class="btn btn-primary" href="<?php echo $q['application_link'];?>">click to apply </a>
-                            </span>
-                            <button class="btn btn-primary">Read more</button>
-                            <script>
-
-                            const readMore =document.querySelector('.btn');
-                            const text=document.querySelector('.text');
-                            readMore.addEventListener('click',(e)=>{
-                                text.classList.toggle('show-more');
-                            });
-                            </script>
-
-
-
-                                
-                                
-                           
+                                                   
                         </div>
                     </div>
                     <?php
@@ -134,5 +146,9 @@
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
         </footer>
 
+
+            # for icons
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
